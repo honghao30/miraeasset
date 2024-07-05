@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./sian.css" />
     <link rel="stylesheet" href="../../front_markup/resource/bundle/swiper.min.css " />
     <script type="text/javascript" src="../../front_markup/resource/bundle/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/plugin/isSameOrBefore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/locale/ko.min.js"></script>
 </head>
 <body>
     <div class="sian__wrap">
@@ -403,38 +406,68 @@
                 </ul>
             </div>
 
-            <div class="section health-calendar">
+            <div class="section health-calendar animation-enter">
                 <div class="tit">
                     <img src="./img/tit_health_care_calendar.png" alt="" />
                 </div>
                 <div class="calendar__wrap">
-
+                    <div class="calendar__wrap" id="calendarWeekly">
+                        <div class="calendar__header">
+                            <!-- <button type="button" id="prevWeek">이전</button> -->
+                            <div class="display-data">2024년 6월 27일</div>
+                            <!-- <button type="button" id="nextWeek">다음</button> -->
+                        </div>
+                        <div class="calendar__content">
+                            <ul id="weekDates"></ul>
+                            <div class="button__wrap">
+                                <a href="#none">
+                                    <img src="./img/btn_more_open.png" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-day"></div>
+                        <img src="./img/img_content_day_active.png" alt="" />
+                    </div>
                 </div>
             </div>
 
-
-            <div class="section video">
-                <img src="./img/vidoe_temp.png" alt="" />
-            </div>
-            <div class="section rangking-bn">
-                <img src="./img/ranking_bn.png" alt="" />
-            </div>            
-            <div class="section card-my-insure animation-enter">
-                <img src="./img/card01_my_info.svg" alt="" />
-            </div>
-            <div class="section card-my-favo animation-enter">
-                <img src="./img/card_favo_menu.svg" alt="" />
+            <div class="section record-wrap animation-enter">
+                <img src="./img/record_bn.png" alt="" />
             </div>
 
-            <div class="section swiper-card animation-enter">
+            <div class="section swiper-card-event animation-enter">
                 <div class="swiper card01">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/home_swiper_card01.svg" alt="" />
+                            <div class="event-card-inner">
+                                <div class="card1">
+                                    <img src="./img/event_card03.png" alt="" />
+                                </div>
+                                <div class="card2">
+                                    <img src="./img/event_card01.png" alt="" />
+                                    
+                                </div>
+                                <div class="card3">
+                                    <img src="./img/event_card02.png" alt="" />                                    
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/home_swiper_card01.svg" alt="" />
-                        </div>                                     
+                            <div class="event-card-inner">
+                                <div class="card1">
+                                    <img src="./img/event_card03.png" alt="" />
+                                </div>
+                                <div class="card2">
+                                    <img src="./img/event_card01.png" alt="" />
+                                    
+                                </div>
+                                <div class="card3">
+                                    <img src="./img/event_card02.png" alt="" />                                    
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="swiper-pagination"></div>   
                     <script>
@@ -444,83 +477,85 @@
                             //     delay: 5000,
                             //     disableOnInteraction: false
                             // },
+                            on: {
+                                init: function() {
+                                    document.querySelector('.swiper-slide.swiper-slide-active .event-card-inner').classList.add('animated');
+                                },
+                                slideChangeTransitionEnd: function(swiper) {
+                                    // 이전 슬라이드의 animated 클래스 제거
+                                    swiper.slides.forEach(slide => {
+                                        slide.querySelector('.event-card-inner').classList.remove('animated');
+                                    });
+
+                                    // 새로 활성화된 슬라이드에 animated 클래스 추가
+                                    document.querySelector('.swiper-slide.swiper-slide-active .event-card-inner').classList.add('animated');
+                                }
+                            },
                             parallax: true,
                             pagination: {
                                 el: ".swiper-pagination",
                                 clickable: true,
                             },
                         });
+
                     </script>  
                 </div>
-            </div>         
-            <div class="section knowledge-card animation-enter">
-                <img src="./img/healthcare_knowledge.svg" alt="" />
-            </div>                
-            <div class="section record-list__wrap animation-enter">
-                <img src="./img/card_record_list.svg" alt="" />
-            </div>   
+            </div>      
 
-            <div class="section health-tip animation-enter">
-                <div class="flex justify-between">
-                    <div class="tit">
-                        <img src="./img/tit_tip.svg" alt="" />
-                    </div>
-                    <div class="more">
-                        <a href="#">
-                            <img src="./img/btn_more_tip.svg" alt="꿀팁 더보기" />
-                        </a>
-                    </div>
-                </div>
-                <div class="health-tip-cont flex flex-col">
-                    <div class="animation-enter">
-                        <img src="./img/tip_img01.png" alt="" />
-                    </div>
-                    <div class="animation-enter">
-                        <img src="./img/tip_img02.png" alt="" />
-                    </div>                    
-                </div>
-            </div> 
+            <div class="section all-img-section animation-enter">
+                <img src="./img/img_walking_section.png" alt="" />
+            </div>
+            <div class="section all-img-section2 animation-enter">
+                <img src="./img/img_raingking_section.png" alt="글로벌 랭킹" />
+            </div>
+            <div class="section all-img-section animation-enter">
+                <img src="./img/img_hilling_section.png" alt="힐링 배너" />
+            </div>
 
-            <div class="section health-product animation-enter">
+            <div class="section challenge-section animation-enter">
                 <div class="title-area flex justify-between">
                     <div class="tit">
-                        <img src="./img/tit_product.svg" alt="" />
+                        <img src="./img/tit_callange.png" alt="챌린지" />
                     </div>
-                    <div class="more">
-                        <a href="#">
-                            <img src="./img/btn_more_product.svg" alt="더 많은상품 보기" />
-                        </a>
-                    </div>
+                    <a href="#" class="more">
+                        <img src="./img/btn_more_plus.png" alt="" />
+                    </a>
                 </div>
-                <div class="tab-content">
-                    <div class="tab-btns">
-                        <ul class="tab-button-list">
-                            <li class="is-active"><a href="#">전체</a></li>
-                            <li><a href="#">건강</a></li>
-                            <li><a href="#">변액</a></li>
-                            <li><a href="#">자산</a></li>
-                            <li><a href="#">연금</a></li>                         
-                        </ul>
-                    </div>
-                    <div class="tab-pane1s">
-                        <div class="tab-pane1 is-active">
-                            <img src="./img/product_list.png" alt="" />
-                        </div>
-                        <div class="tab-pane1">
-                            <img src="./img/product_list.png" alt="" />
-                        </div>     
-                        <div class="tab-pane1">
-                            <img src="./img/product_list.png" alt="" />
-                        </div>  
-                        <div class="tab-pane1">
-                            <img src="./img/product_list.png" alt="" />
-                        </div>  
-                        <div class="tab-pane1">
-                            <img src="./img/product_list.png" alt="" />
-                        </div>                                                                                             
-                    </div>
+                <div class="challenge-content">
+                    <div class="scroll-box">
+                        <div class="scroll-content">
+                            <div class="items">
+                                <img src="./img/img_callange_01.png" alt="" />
+                            </div>
+                            <div class="items">
+                                <img src="./img/img_callange_01.png" alt="" />
+                            </div>                            
+                        </div>                                                                               
+                    </div>                    
                 </div>
-            </div>  
+            </div>            
+            <div class="section challenge-section service animation-enter">
+                <div class="title-area flex justify-between">
+                    <div class="tit">
+                        <img src="./img/Frame.png" alt="건강서비스" />
+                    </div>
+                    <a href="#" class="more">
+                        <img src="./img/btn_more_plus.png" alt="" />
+                    </a>
+                </div>
+                <div class="challenge-content">
+                    <div class="scroll-box">
+                        <div class="scroll-content">
+                            <div class="items">
+                                <img src="./img/img_haalscare_service01.png" alt="" />
+                            </div>
+                            <div class="items">
+                                <img src="./img/img_haalscare_service01.png" alt="" />
+                            </div>                            
+                        </div>                                                                               
+                    </div>                    
+                </div>
+            </div>   
 
 
         </div>
@@ -577,7 +612,7 @@
         </ul>
     </nav>
 
-    <script src="../../front_markup/resource/js/ui_common.js"></script>    
+    <script src="../../front_markup/resource/js/ui_common.js"></script>       
     <script src="./sian.js"></script>
 </body>
 </html>
