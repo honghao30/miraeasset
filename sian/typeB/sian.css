@@ -246,8 +246,15 @@ header .logo img {
     margin-bottom: 29px;
 }
 .section.color-terapy .color-test__wrap .text-color img {
-    width: calc(274 / 16 * 1rem);
+  width: calc(279 / 16 * 1rem);
 }
+.section.color-terapy .color-test__wrap .text-color.fire img {
+  width: calc(196 / 16 * 1rem);
+}
+.section.color-terapy .color-test__wrap .text-color.smile img {
+  width: calc(229 / 16 * 1rem);
+}
+
 .section.color-terapy .color-test__wrap .color-sample img {
     width: 182px;
     margin: 0 auto;
@@ -929,7 +936,8 @@ header .logo img {
     50% {
         opacity: 1;
     }
-}.section.achievement-msg .achievement-txt {
+}
+/* .section.achievement-msg .achievement-txt {
   color: #fff;
   font-family: "Pretendard";
   font-size: 12px;
@@ -940,10 +948,18 @@ header .logo img {
   right: 15%;
   position: absolute;
   top: 18%;
-}
+} */
 .section.achievement-msg {
   position: relative;
 }
+.section.achievement-msg .achievement-txt {
+  top: 18%;
+  right: 13%;
+  position: absolute;
+  top: calc(50% - 15px);
+  max-width: 60.5333vw;
+}
 .section.achievement-msg img {
   max-width: 100%;
+  width: 100%;
 }
