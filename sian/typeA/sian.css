@@ -420,11 +420,17 @@ header .logo svg {
     height: 100%;
     border-radius: 6px;    
 }
+.section.drinking-info li .info  .bar-wrap .graph .grap-info.green {
+    background: linear-gradient(to bottom, #66DD81, #38BD56);
+    animation: bar-pos1 0.5s ease forwards;
+}
 .section.drinking-info li .info  .bar-wrap .graph .grap-info.blue {
     background: linear-gradient(to bottom, #8BD5FF, #1FAEFF);
+    animation: bar-pos2 0.5s ease forwards;
 }
 .section.drinking-info li .info  .bar-wrap .graph .grap-info.yellow {
     background: linear-gradient(to bottom, #C9EE84, #89B33B);
+    animation: bar-pos3 0.5s ease forwards;
 }
 .section.drinking-info li .info  .bar-wrap  .text {
     color: #1E1E1E;
@@ -437,17 +443,32 @@ header .logo svg {
 }
 
 .section.drinking-info.fade-in li .info  .bar-wrap .graph .grap-info {
-    animation: bar-pos 0.5s ease forwards;
+
 }
-@keyframes bar-pos {
+@keyframes bar-pos1 {
     from {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 35%;
     }
 }
-
+@keyframes bar-pos2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+@keyframes bar-pos3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
 /* //fnb */
 .fnb-wrap {
   border-top: 1px solid var(--var-border-color);
@@ -986,5 +1007,55 @@ header .logo svg {
     }
     100% {
         transform: rotate(-15.581deg);
+    }
+}
+
+.section.health-report {
+    padding: calc(20 / 16 * 1rem) calc(0 / 16 * 1rem) calc(0 / 16 * 1rem);
+}
+.section.health-report img {
+    width: 100%;
+}
+
+.goal-in-board {
+    background-color: #FFF4ED;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+}
+.goal-in-board .text {
+    width: 100%;
+}
+.goal-in-board .text img {
+    width: 100%;
+}
+.bar-chart-wrap {
+    position: relative;
+    margin-top: 13px;
+    border-radius: 30px;
+    background: #FFF;
+    height: 22px;
+    width: 100%;
+}
+.bar-chart-wrap .bar-in {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #F58220;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.section.card-my-levels.animation-enter.fade-in .bar-chart-wrap .bar-in {
+    animation: card-move4 0.4s ease-in forwards;
+}
+
+@keyframes card-move4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
     }
 }
