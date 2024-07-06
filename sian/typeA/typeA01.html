@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../../front_markup/resource/img/favicon3.ico" />
     <link rel="stylesheet" href="../../front_markup/resource/css/index.css" />
     <link rel="stylesheet" href="./sian.css" />
-    <link rel="stylesheet" href="../../front_markup/resource/bundle/swiper.min.css " />
+    <link rel="stylesheet" href="../../front_markup/resource/bundle/swiper.min.css" />
     <script type="text/javascript" src="../../front_markup/resource/bundle/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -16,37 +16,69 @@
       <header>
         <h1 class="logo">
           <a href="#">
-            <img src="./img/logo.svg" alt="미리에셋생명" />
+            <button type="button" class="btn btn-hamguger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <span class="ir-text">메뉴</span>
+            </button>
           </a>
         </h1>
         <button type="button" class="btn btn-alert">
           <i class="ico ico-alert"></i>
           <span class="ir-text">알림</span>
         </button>
-        <button type="button" class="btn btn-hamguger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <span class="ir-text">메뉴</span>
-        </button>
       </header>
       <!-- header -->
       <nav class="gnb__wrap gnb__flex">
-        <img src="./img/top_nav01.svg" alt="대메뉴" />
-        <img src="./img/top_nav02.svg" alt="대메뉴" />
+        <a href="./typeA01.html">
+          <img src="./img/top_nav01.svg" alt="홈" />
+        </a>
+        <div class="gnb__flex2">
+          <a href="./typeA02_healthcare01.html">헬스 </a>
+          <a href="#">계약</a>
+          <a href="#">상품</a>
+        </div>
       </nav>
       <div class="sian-content">
         <div class="section welcome">
           <img src="./img/text_welcome_msg.svg" alt="" />
         </div>
         <div class="section card-my-insure">
-          <img src="./img/card01_my_info.svg" alt="" />
+          <img src="./img/card01_my_info.png" alt="" />
         </div>
         <div class="section card-my-favo">
-          <img src="./img/card_favo_menu.svg" alt="" />
+          <img src="./img/card_favo_menu.png" alt="" />
         </div>
         <div class="section video animation-enter">
-          <img src="./img/vidoe_temp.png" alt="" />
+          <div class="section swiper-card">
+            <div class="swiper cardvideo">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/vidoe_temp00.png" alt="" />
+                </div>
+                <div class="swiper-slide temp01">
+                  <img src="./img/vidoe_temp01.png" alt="" />
+                </div>
+                <div class="swiper-slide temp02">
+                  <img src="./img/vidoe_temp02.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <script>
+                var swiper = new Swiper(".cardvideo", {
+                  speed: 600,
+                  slidesPerView: 1,
+                  spaceBetween: 12,
+                  parallax: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                });
+              </script>
+            </div>
+          </div>
         </div>
         <div class="section rangking-bn animation-enter">
           <img src="./img/ranking_bn.png" alt="" />
@@ -56,7 +88,10 @@
           <img src="./img/card_record_list.svg" alt="" />
         </div>
         <div class="section knowledge-card animation-enter">
-          <img src="./img/healthcare_knowledge.svg" alt="" />
+          <div class="tit">
+            <img src="./img/tit_knowledge-card.svg" alt="" />
+          </div>
+          <img src="./img/healthcare_knowledge.png" alt="" />
         </div>
         <div class="section health-product animation-enter">
           <div class="title-area flex justify-between">
@@ -91,7 +126,6 @@
                         <img src="./img/tip_img02.png" alt="" />
                       </div>
                     </div>
-                    <div class="swiper-pagination"></div>
                     <script>
                       var swiper = new Swiper(".card01", {
                         speed: 600,
@@ -267,10 +301,10 @@
         </div>
       </div>
     </div>
-    <nav class="fnb-wrap">
+    <!-- <nav class="fnb-wrap">
       <ul class="fnb-list">
-        <li class="is-active">
-          <a href="#">
+        <li>
+          <a href="./typeA01.html">
             <i class="io ico-home">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
@@ -301,11 +335,12 @@
                 <path d="M20 15.5117H12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </i>
-            <span>M-LIFE</span>
+            <span>계약</span>
           </a>
         </li>
-        <li>
-          <a href="#">
+        <li class="is-active">
+          <a href="./typeA01.html"
+            >>
             <i class="io ico-heart">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
@@ -328,11 +363,11 @@
                 <path d="M14 23H18" stroke="black" stroke-width="2" stroke-linecap="round" />
               </svg>
             </i>
-            <span>온라인보험</span>
+            <span>보험</span>
           </a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
     <script src="../../front_markup/resource/js/ui_common.js"></script>
     <script src="./sian.js"></script>

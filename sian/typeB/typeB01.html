@@ -128,7 +128,6 @@
             opacity: 0;
           }
 
-
           .walk-animation.is-animation .label-me {
             animation: label-enter 0.5s ease-in forwards;
             animation-delay: 3.5s;
@@ -150,7 +149,7 @@
           .walk-animation.is-animation .circle-img {
             animation: circle-enter 1.5s linear 2;
             animation-delay: 1.8s;
-            opacity: 0;        
+            opacity: 0;
           }
           .walk-animation.is-animation .earth img {
             animation: earth-enter 0.5s ease-in forwards;
@@ -161,7 +160,7 @@
           }
           .walk-animation.is-animation .flying-img img {
             width: 53px;
-            animation: flying-wave 1.0s ease-in infinite;
+            animation: flying-wave 1s ease-in infinite;
           }
           .walk-animation.is-animation .flying-img {
             opacity: 1;
@@ -200,7 +199,8 @@
             }
           }
           @keyframes earth-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -208,7 +208,8 @@
             }
           }
           @keyframes balloon-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -216,13 +217,14 @@
             }
           }
           @keyframes balloon-move {
-            0%, 100% {
+            0%,
+            100% {
               animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
               transform: translateX(0) rotate(-9.56deg);
               top: 43%;
             }
             50% {
-              transform: translateX(-420%)  rotate(9.56deg);
+              transform: translateX(-420%) rotate(9.56deg);
               top: 45%;
               animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
             }
@@ -246,7 +248,8 @@
             }
           }
           @keyframes flying-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -272,26 +275,33 @@
           }
         </style>
         <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            const walkWorldSection = document.querySelector('.card-content__round-box.walk-world-section');
-            const walkAnimation = document.querySelector('.walk-animation');
+          document.addEventListener("DOMContentLoaded", function () {
+            const walkWorldSection = document.querySelector(".card-content__round-box.walk-world-section");
+            const walkAnimation = document.querySelector(".walk-animation");
 
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio === 1) {
-                  walkAnimation.classList.add('is-animation');
-                  observer.unobserve(walkWorldSection); // 애니메이션 시작 후 관찰 중지
-                }
-              });
-            }, { threshold: 1 });
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting && entry.intersectionRatio === 1) {
+                    walkAnimation.classList.add("is-animation");
+                    observer.unobserve(walkWorldSection); // 애니메이션 시작 후 관찰 중지
+                  }
+                });
+              },
+              { threshold: 1 }
+            );
 
             observer.observe(walkWorldSection);
 
-            const circleImg = document.querySelector('.circle-img');
-            
-            circleImg.addEventListener('animationend', () => {
-              circleImg.style.opacity = '1';
-            }, { once: true });
+            const circleImg = document.querySelector(".circle-img");
+
+            circleImg.addEventListener(
+              "animationend",
+              () => {
+                circleImg.style.opacity = "1";
+              },
+              { once: true }
+            );
           });
         </script>
         <!-- 걷기 연동 -->
@@ -444,8 +454,8 @@
               <script>
                 var swiper = new Swiper(".card02", {
                   speed: 600,
-                  slidesPerView: "auto",
-                  spaceBetween: 0,
+                  slidesPerView: 1.1,
+                  spaceBetween: 12,
                   parallax: true,
                   pagination: {
                     el: ".swiper-pagination",
@@ -632,7 +642,7 @@
     <nav class="fnb-wrap">
       <ul class="fnb-list">
         <li class="is-active">
-          <a href="#">
+          <a href="./typeB01.html">
             <i class="io ico-home">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
@@ -667,7 +677,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./typeB02.html">
             <i class="io ico-heart">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
