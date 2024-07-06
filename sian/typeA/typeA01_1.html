@@ -39,9 +39,209 @@
         <div class="section welcome">
           <img src="./img/text_welcome_msg.svg" alt="" />
         </div>
-        <div class="section video">
+        <!-- <div class="section video">
           <img src="./img/vidoe_temp.png" alt="" />
+        </div> -->
+        <div class="section walking-world">
+          <div class="walking-world-card is-animation">
+            <div class="text">
+              <img src="./img/text_walking_world_black.png" alt="걸어서 세계여행" />
+            </div>
+            <div class="motion-area">
+                <div class="marking1">
+                  <img src="./img/img-sejong-great.png" alt="" />
+                </div>
+                <div class="marking2">
+                  <img src="./img/img-statue-liberty.png" alt="" />
+                </div>  
+                <div class="marking3">
+                  <img src="./img/img-filamit.png" alt="" />
+                </div>   
+                <div class="marking4">
+                  <img src="./img/img-paris-tower.png" alt="" />
+                </div>  
+                <div class="marking5">
+                  <img src="./img/img-pagoda.png" alt="" />
+                </div>  
+                <div class="marking6">
+                  <img src="./img/img-lionking.png" alt="" />
+                </div>                  
+                <div class="cloud-image1">
+                  <img src="./img/cloud01.png" alt="구름1" />
+                </div>
+                <div class="cloud-image2">
+                  <img src="./img/cloud01.png" alt="구름2" />
+                </div>                
+                <div class="cloud-image3">
+                  <img src="./img/cloud01.png" alt="구름3" />
+                </div>                                
+                <div class="earth">
+                  <img src="./img/earth.png" alt="" />
+                </div>
+            </div>
+          </div>
         </div>
+        <style>
+          .section.walking-world {            
+            height:447px;            
+            margin: 20px 10px;
+            position: relative;
+
+          }
+          .section.walking-world .walking-world-card {
+            border-radius: 20px;
+            height: 447px;
+            padding: 24px 16px;
+            background: linear-gradient(180deg, #FFF 0.25%, rgba(255, 255, 255, 0.92) 45.26%, #FFF 88.29%);
+            box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.15);
+          }
+          .section.walking-world .walking-world-card .text img {
+            width: 136px;
+          }
+          .motion-area {
+            width: 278px;
+            height: 317px;            
+            background-size: 278px auto;
+            margin: 20px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+          }
+          .motion-area .earth {
+            opacity: 0;
+          }
+          .motion-area .earth img {
+            width: 201px;
+          }
+          .motion-area  .cloud-image1 img {
+            width: 34px;
+          }
+          .motion-area  .cloud-image2 img {
+            width: 21px;
+          }
+          .motion-area  .cloud-image3 img {
+            width: 21px;
+          }
+          .motion-area  .cloud-image1 {
+            position: absolute;
+            right: -60px;
+            top: 142px;
+            z-index: 12;
+          }
+          .motion-area  .cloud-image2 {
+            position: absolute;
+            right: -60px;
+            top: 30px;
+            z-index: 12;
+          }     
+          .motion-area  .cloud-image3 {
+            position: absolute;
+            right: -60px;
+            top: 50px;
+            z-index: 12;
+          }             
+          .motion-area .marking1 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            z-index: 10;
+          }
+          .motion-area .marking1 img {
+            width:62.77px;
+          }
+          .motion-area .marking2 {
+            position: absolute;
+            right: 4px;
+            top: 63px;
+            z-index: 10;
+          }
+          .motion-area .marking2 img {
+            width:62.77px;
+          }
+          .motion-area .marking3 {
+            position: absolute;
+            right: 17px;
+            top: 193px;
+            z-index: 10;
+          }          
+          .motion-area .marking3 img {
+            width:42.05px;
+          }          
+          .motion-area .marking4 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            z-index: 10;
+          }          
+          .motion-area .marking4 img {
+            width:32.75px;
+          }  
+          .motion-area .marking5 {
+            position: absolute;
+            left: 19px;
+            bottom: 84px;
+            z-index: 10;
+          }          
+          .motion-area .marking5 img {
+            width:39.56px;
+          }        
+          .motion-area .marking6 {
+            position: absolute;
+            left: 15px;
+            top: 69px;
+            z-index: 10;
+          }          
+          .motion-area .marking6 img {
+            width:55.66px;
+          }                
+
+
+          .walking-world-card.is-animation .earth {
+            animation: earth-enter 0.5s linear forwards, earth-rotate 30.0s linear infinite;
+          }
+          .walking-world-card.is-animation .cloud-image1 {
+            animation: cloud-move1 10.0s linear infinite;
+            animation-delay: 0.5s;
+          }
+          .walking-world-card.is-animation .cloud-image2 {
+            animation: cloud-move1 10.0s linear infinite;
+            animation-delay: 0.7s;
+          }
+          .walking-world-card.is-animation .cloud-image3 {
+            animation: cloud-move1 10.0s linear infinite;
+            animation-delay: 0.9s;
+          }                    
+          @keyframes earth-enter {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes earth-rotate {
+            0% {
+              transform: rotate(0);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes cloud-move1 {
+            0% {
+              right: -60px;
+            }
+            100% {
+              right: 300px;
+            }
+          }
+        </style>
         <div class="section card-my-insure">
           <img src="./img/card01_my_info.svg" alt="" />
         </div>
