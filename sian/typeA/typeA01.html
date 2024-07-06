@@ -51,44 +51,46 @@
           <img src="./img/card_favo_menu.png" alt="" />
         </div>
         <div class="section video animation-enter">
-          <div class="section swiper-card">
-            <div class="swiper cardvideo">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./img/vidoe_temp00.png" alt="" />
-                </div>
-                <div class="swiper-slide temp01">
-                  <img src="./img/vidoe_temp01.png" alt="" />
-                </div>
-                <div class="swiper-slide temp02">
-                  <img src="./img/vidoe_temp02.png" alt="" />
-                </div>
+          <div class="swiper cardvv">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/vidoe_temp00.png" alt="" />
               </div>
-              <div class="swiper-pagination"></div>
-              <script>
-                var swiper = new Swiper(".cardvideo", {
-                  speed: 600,
-                  slidesPerView: 1,
-                  spaceBetween: 12,
-                  parallax: true,
-                  pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                  },
-                });
-              </script>
+              <div class="swiper-slide">
+                <img src="./img/vidoe_temp01.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/vidoe_temp02.png" alt="" />
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <script>
+              var swiper = new Swiper(".cardvv", {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                parallax: true,
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+              });
+            </script>
           </div>
         </div>
         <div class="section rangking-bn animation-enter">
           <img src="./img/ranking_bn.png" alt="" />
         </div>
 
-        <div class="section record-list__wrap animation-enter">
-          <img src="./img/card_record_list.svg" alt="" />
+        <div class="section record-list__wrap animation-enter flex-3">
+          <img src="./img/card_record_list01.png" alt="" class="record_list"/>
+          <img src="./img/card_record_list02.png" alt="" class="record_list"/>
+          <img src="./img/card_record_list03.png" alt=""  class="wauto"/>
         </div>
-        <div class="section knowledge-card animation-enter">
-          <div class="tit">
+        <div class="section knowledge-card animation-enter pt50">
+          <div class="tit show-poistion">
+            <div class="show-msg animation-enter right-enter">
+              <img src="./img/tit_knowledge-card_ani.svg" alt="" />
+            </div>
             <img src="./img/tit_knowledge-card.svg" alt="" />
           </div>
           <img src="./img/healthcare_knowledge.png" alt="" />
