@@ -978,7 +978,7 @@ header .logo svg {
 }
 .section.challenge-section.service .scroll-content {
   gap: 12px;
-  padding: calc(0 / 16 * 1rem) calc(10 / 16 * 1rem) calc(50 / 16 * 1rem) 0;
+  padding: calc(0 / 16 * 1rem) calc(16 / 16 * 1rem) calc(50 / 16 * 1rem) 0;
 }
 .section.challenge-section.service .title-area .tit img {
   width: 160px;
