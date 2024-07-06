@@ -26,7 +26,7 @@
 }
 .card-content__round-box.walk-wrap .show-msg {
   position: absolute;
-  bottom: -37%;
+  bottom: -50%;
   right: 0;
 }
 .fs-20 {
@@ -88,10 +88,13 @@ header {
   font-weight: 800;
 }
 .insurance-list {
-  padding: 0 0 0 calc(6 / 16 * 1rem);
+  padding: 0 0 0 calc(16 / 16 * 1rem);
 }
-.insurance-list .swiper-slide {
-  width: 75vw !important;
+
+.insurance-list .swiper-slide img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0px 2px 8px 0px rgba(36, 45, 60, 0.1);
 }
 .routine-swiper .swiper-pagination,
 .tab-pane1s .swiper-pagination,

@@ -117,7 +117,6 @@
             top: 14%;
           }
 
-
           .walk-animation.is-animation .label-me {
             animation: label-enter 0.5s ease-in forwards;
             animation-delay: 3.5s;
@@ -149,7 +148,7 @@
           }
           .walk-animation.is-animation .flying-img img {
             width: 53px;
-            animation: flying-wave 1.0s ease-in infinite;
+            animation: flying-wave 1s ease-in infinite;
           }
           .walk-animation.is-animation .flying-img {
             position: absolute;
@@ -195,7 +194,8 @@
             }
           }
           @keyframes earth-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -203,7 +203,8 @@
             }
           }
           @keyframes balloon-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -211,7 +212,8 @@
             }
           }
           @keyframes balloon-move {
-            0%, 100% {
+            0%,
+            100% {
               animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
               transform: translateX(0) rotate(-9.56deg);
               top: 43%;
@@ -241,7 +243,8 @@
             }
           }
           @keyframes flying-wave {
-            0%, 100% {
+            0%,
+            100% {
               transform: translateY(0);
             }
             50% {
@@ -268,8 +271,8 @@
         </style>
         <script>
           window.addEventListener("load", function () {
-              console.log('로딩', document.querySelector('.walk-animation'));
-              document.querySelector('.walk-animation').classList.add('is-animation');
+            console.log("로딩", document.querySelector(".walk-animation"));
+            document.querySelector(".walk-animation").classList.add("is-animation");
           });
         </script>
         <!-- 걷기 연동 -->
@@ -422,8 +425,8 @@
               <script>
                 var swiper = new Swiper(".card02", {
                   speed: 600,
-                  slidesPerView: "auto",
-                  spaceBetween: 0,
+                  slidesPerView: 1.1,
+                  spaceBetween: 12,
                   parallax: true,
                   pagination: {
                     el: ".swiper-pagination",
@@ -610,7 +613,7 @@
     <nav class="fnb-wrap">
       <ul class="fnb-list">
         <li class="is-active">
-          <a href="#">
+          <a href="./typeB01.html">
             <i class="io ico-home">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
@@ -645,7 +648,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./typeB02.html">
             <i class="io ico-heart">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <path
