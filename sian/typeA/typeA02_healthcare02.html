@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../../front_markup/resource/img/favicon3.ico" />
     <link rel="stylesheet" href="../../front_markup/resource/css/index.css" />
     <link rel="stylesheet" href="./sian.css" />
+    <link rel="stylesheet" href="./sian_btm.css" />
     <link rel="stylesheet" href="../../front_markup/resource/bundle/swiper.min.css " />
     <script type="text/javascript" src="../../front_markup/resource/bundle/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
@@ -596,9 +597,137 @@
             </div>
           </div>
         </div>
+        <div class="btm-wrap h-320">
+          <div class="btm-topline">
+            <img src="./img/brm-blackline.svg" alt="" class="topline"/>
+          </div>
+          <div class="btm-content">
+            <div class="btm-bigtit">
+              <p>건강 관리 캘린더<br/>
+                <strong>2024년 7월</strong>
+              </p>
+              <img src="./img/btm-arrowdown.svg" alt="" class="down-icon">
+            </div>
+            <div class="btm-cont01">
+              <div class="status-box">
+                <div class="orange-statusbox">
+                  <span class="orange-status"></span>
+                  <p>식사</p>
+                </div>
+                <div class="green-statusbox">
+                  <span class="green-status"></span>
+                  <p>운동</p>
+                </div>
+                <div class="blue-statusbox">
+                  <span class="blue-status"></span>
+                  <p>영양</p>
+                </div>
+              </div>
+              <div>
+                <img src="./img/btm-calendar.png" alt="" class="btm-calendar"/>
+              </div>
+            </div>
+            <div class="btm-cont02 show-poistion">
+              <p>2024년 7월 16일</p>
+              <div class="show-msg animation-enter right-enter">
+                <img src="./img/btm-msg-ani.svg" alt="" />
+              </div>
+              <div class="btm-walkbox">
+                <div class="btm-walktit">
+                  <p>걷기기록</p>
+                  <img src="./img/icon_arrowright.svg" alt="" />
+                </div>
+                <div class="btm-walkdes">
+                  <p><strong>15,000</strong>걸음</p>
+                  <div class="bar-wrap">
+                    <div class="graph">
+                        <div class="grap-info green" style="animation-delay: 0.5s;"></div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="btm-cont03">
+              <div class="btm-walkbox">
+                <div class="btm-walktit">
+                  <p>체중기록</p>
+                  <img src="./img/icon_arrowright.svg" alt="" />
+                </div>
+                <div class="btm-walkdes">
+                  <img src="./img/btm-weightlist.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="btm-cont04">
+              <div class="btm-walkbox">
+                <div class="btm-walktit">
+                  <p>식사기록</p>
+                  <img src="./img/icon_arrowright.svg" alt="" />
+                </div>
+                <div class="btm-walkdes">
+                  <img src="./img/btm-menu01.png" alt="" />
+                  <img src="./img/btm-menu02.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="btm-cont05">
+              <img src="./img/btm_cont05.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="btm-dimmed" style="display: none;"></div>
       </div>
     </div>
-    <nav class="fnb-wrap">
+    <script>
+      const toggleElements = document.querySelectorAll('.topline');
+      toggleElements.forEach(button => {
+        button.addEventListener('click', () => {
+          const btmWrap = document.querySelector('.btm-wrap');
+          const btmH200 = document.querySelector('.btm-wrap.h-320');
+          const btmDimmed = document.querySelector('.btm-dimmed');
+          const downIcon = document.querySelector('.down-icon');
+          const topline = document.querySelector('.btm-topline');
+
+          if (btmH200) {
+            btmH200.classList.remove('h-320');
+            btmWrap.classList.add('full');
+            document.body.style.overflowY = "hidden";
+            btmDimmed.style.display = "block";
+            downIcon.classList.add('rotate');
+            topline.classList.add('btm-topline-fix');
+          } else {
+            btmWrap.classList.remove('full');
+            btmWrap.classList.add('h-320');
+            document.body.style.overflowY = "scroll";
+            btmDimmed.style.display = "none";
+            downIcon.classList.remove('rotate');
+            topline.classList.remove('btm-topline-fix');
+          }
+        });
+      });
+  </script>
+  <script>
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }
+
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 
+      };
+      const observer = new IntersectionObserver(handleIntersection, options);
+
+      const showMsgElement = document.querySelector('.btm-cont02.show-poistion .show-msg');
+      if (showMsgElement) {
+        observer.observe(showMsgElement); 
+      }
+  </script>
+    <!-- <nav class="fnb-wrap">
       <ul class="fnb-list">
         <li class="is-active">
           <a href="#">
@@ -663,7 +792,7 @@
           </a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
     <script src="../../front_markup/resource/js/ui_common.js"></script>
     <script src="./sian.js"></script>

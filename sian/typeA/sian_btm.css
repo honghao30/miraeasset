@@ -12,7 +12,7 @@
 .btm-dimmed {
   display: block;
   top: 0;
-  left: 0;
+  left: 0; 
   width: 100%;
   opacity: 0.7;
   background: #000;
@@ -37,8 +37,10 @@
   border-radius: 32px 32px 0 0;
   width: 100%;
   bottom: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 10;
+  max-width: 760px;
+  margin: 0 auto;
 }
 .btm-wrap.full::-webkit-scrollbar {
   display: none;
@@ -123,10 +125,11 @@
 }
 .btm-topline-fix {
   position: fixed;
-  width: 100%;
   z-index: 1;
   background: #fff;
   border-radius: 32px 32px 0 0;
+  max-width: 760px;
+  width: 100%;
 }
 .btm-topline-fix + .btm-content {
   margin-top: 31px;
@@ -173,7 +176,7 @@
 .btm-walktit p {
   color: #000;
   font-family: "Pretendard";
-  font-size: 4.2667vw;
+  font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
   letter-spacing: -0.16px;
