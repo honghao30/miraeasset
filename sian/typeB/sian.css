@@ -325,7 +325,7 @@ header .logo img {
 }
 
 .color-sample img {
-  animation: imageScale 0.5s ease-in-out infinite, imageRotate 70s ease-in infinite;
+  animation: imageScale 0.4s ease-in-out infinite, imageRotate 30s ease-in infinite;
 }
 
 @keyframes imageScale {
@@ -334,7 +334,7 @@ header .logo img {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.3);
+    transform: scale(1.7);
   }
 }
 @keyframes imageRotate {
