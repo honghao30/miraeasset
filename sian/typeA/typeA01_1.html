@@ -39,9 +39,6 @@
         <div class="section welcome">
           <img src="./img/text_welcome_msg.svg" alt="" />
         </div>
-        <!-- <div class="section video">
-          <img src="./img/vidoe_temp.png" alt="" />
-        </div> -->
         <div class="section walking-world">
           <div class="walking-world-card is-animation">
             <div class="text">
@@ -54,13 +51,13 @@
                 <div class="marking2">
                   <img src="./img/img-statue-liberty.png" alt="" />
                 </div>  
-                <div class="marking3">
+                <div class="marking3 ">
                   <img src="./img/img-filamit.png" alt="" />
                 </div>   
-                <div class="marking4">
+                <div class="marking4 ">
                   <img src="./img/img-paris-tower.png" alt="" />
                 </div>  
-                <div class="marking5">
+                <div class="marking5 ">
                   <img src="./img/img-pagoda.png" alt="" />
                 </div>  
                 <div class="marking6">
@@ -86,7 +83,6 @@
             height:447px;            
             margin: 20px 10px;
             position: relative;
-
           }
           .section.walking-world .walking-world-card {
             border-radius: 20px;
@@ -163,7 +159,7 @@
           }
           .motion-area .marking3 {
             position: absolute;
-            right: 17px;
+            right: 20px;
             top: 193px;
             z-index: 10;
           }          
@@ -174,7 +170,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 0px;
+            bottom: 12px;
             z-index: 10;
           }          
           .motion-area .marking4 img {
@@ -182,8 +178,8 @@
           }  
           .motion-area .marking5 {
             position: absolute;
-            left: 19px;
-            bottom: 84px;
+            left: 16px;
+            bottom: 95px;
             z-index: 10;
           }          
           .motion-area .marking5 img {
@@ -201,20 +197,50 @@
 
 
           .walking-world-card.is-animation .earth {
-            animation: earth-enter 0.5s linear forwards, earth-rotate 30.0s linear infinite;
+            animation: earth-enter 0.5s linear forwards, earth-rotate 14s linear infinite;
           }
           .walking-world-card.is-animation .cloud-image1 {
-            animation: cloud-move1 10.0s linear infinite;
+            animation: cloud-move1 15.0s linear infinite;
             animation-delay: 0.5s;
           }
           .walking-world-card.is-animation .cloud-image2 {
-            animation: cloud-move1 10.0s linear infinite;
+            animation: cloud-move1 14.0s linear infinite;
             animation-delay: 0.7s;
           }
           .walking-world-card.is-animation .cloud-image3 {
-            animation: cloud-move1 10.0s linear infinite;
+            animation: cloud-move1 16.0s linear infinite;
             animation-delay: 0.9s;
-          }                    
+          }  
+          
+          
+          .motion-area .marking1.animation {
+            animation: mark-scale1 0.3s linear infinite;
+            transform-origin: center;
+          }
+          .motion-area .marking2.animation {
+            animation: mark-scale2 0.3s linear infinite;
+            transform-origin: 0 100%;
+          }
+          .motion-area .marking2.animation {
+            animation: mark-scale2 0.3s linear infinite;
+            transform-origin: 0 100%;
+          }          
+          .motion-area .marking3.animation {
+            animation: mark-scale3 0.3s linear infinite;
+            transform-origin: 0 100%;
+          }           
+          .motion-area .marking4.animation {
+            animation: mark-scale4 0.3s linear infinite;
+            transform-origin: 100% 0%;
+          }          
+          .motion-area .marking5.animation {
+            animation: mark-scale5 0.3s linear infinite;
+            transform-origin: 100% 0%;
+          }      
+          .motion-area .marking6.animation {
+            animation: mark-scale6 0.3s linear infinite;
+            transform-origin: 50% 50%;
+          }                          
           @keyframes earth-enter {
             0% {
               opacity: 0;
@@ -228,20 +254,123 @@
             0% {
               transform: rotate(0);
             }
+            14% {
+              transform: rotate(60deg);
+            }
+            28% {
+              transform: rotate(60deg);
+            }
+            42% {
+              transform: rotate(120deg);
+            }
+            56% {
+              transform: rotate(180deg);
+            }
+            70% {
+              transform: rotate(240deg);
+            }
+            84% {
+              transform: rotate(300deg);
+            }            
             100% {
               transform: rotate(360deg);
             }
           }
 
           @keyframes cloud-move1 {
-            0% {
-              right: -60px;
+            0%, 100% {
+              right: 0px;
             }
-            100% {
-              right: 300px;
+            50% {
+              right: 240px;
             }
           }
+          @keyframes mark-scale1 {
+            0%, 100% {
+              transform: translateX(-50%) scaleY(1);
+            }
+            50% {
+              transform: translateX(-50%) scaleY(1.08);
+            }
+          }
+          @keyframes mark-scale2 {
+            0%, 100% {
+              transform: scaleY(1);
+            }
+            50% {
+              transform:  scaleY(1.08);
+            }
+          }   
+          @keyframes mark-scale3 {
+            0%, 100% {
+              transform: scaleX(1);
+            }
+            50% {
+              transform:  scaleX(1.08);
+            }
+          }       
+          @keyframes mark-scale4 {
+            0%, 100% {
+              transform: translateX(-50%) scaleY(1);
+            }
+            50% {
+              transform:  translateX(-50%) scaleY(1.08);
+            }
+          }      
+          @keyframes mark-scale5 {
+            0%, 100% {
+              transform: scaleX(1);
+            }
+            50% {
+              transform:  scaleX(1.08);
+            }
+          } 
+          @keyframes mark-scale6 {
+            0%, 100% {
+              transform: scaleX(1);
+            }
+            50% {
+              transform:  scaleX(1.08);
+            }
+          }                                            
         </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const markings = document.querySelectorAll('.marking1, .marking2, .marking3, .marking4, .marking5, .marking6');
+          const rotationDuration = 14000;
+          const markingDuration = rotationDuration / markings.length;
+          let lastTimestamp = 0;
+          let currentMarkingIndex = 0;
+
+          function animate(timestamp) {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+
+            const progress = (timestamp - lastTimestamp) % rotationDuration;
+            const percentage = (progress / rotationDuration) * 100;
+
+            
+            const newMarkingIndex = Math.floor(percentage / (100 / markings.length)) % markings.length;
+
+            if (newMarkingIndex !== currentMarkingIndex) {            
+              markings[currentMarkingIndex].classList.remove('animation');
+              
+              setTimeout(() => {
+                markings[newMarkingIndex].classList.add('animation');
+              }, 100);
+
+              currentMarkingIndex = newMarkingIndex;
+            }
+
+            requestAnimationFrame(animate);
+          }
+
+          requestAnimationFrame(animate);
+        });
+      </script>
+
+
+  
+  
         <div class="section card-my-insure">
           <img src="./img/card01_my_info.svg" alt="" />
         </div>
