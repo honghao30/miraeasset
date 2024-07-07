@@ -125,9 +125,8 @@
         link.parentElement.appendChild(userData);
     };
     
-    createWeeklyCalendar('calendarWeekly');
-    
-    
-
+    if(document.querySelector('.calendarWeekly')) {
+        createWeeklyCalendar('calendarWeekly');
+    }
 })();
 

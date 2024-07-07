@@ -411,7 +411,7 @@ header .logo img {
   padding: 0 25px;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 15;
   transition: all 0.3s ease-in;
 }
 .fnb-wrap.hide {

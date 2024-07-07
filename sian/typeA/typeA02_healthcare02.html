@@ -558,7 +558,7 @@
           </div>
         </div>
         <div class="btm-wrap h-320">
-          <div class="btm-topline">
+          <div class="btm-topline" style="cursor: pointer;">
             <img src="./img/brm-blackline.svg" alt="" class="topline"/>
           </div>
           <div class="btm-content">
@@ -639,32 +639,75 @@
       </div>
     </div>
     <script>
-      const toggleElements = document.querySelectorAll('.topline');
-      toggleElements.forEach(button => {
-        button.addEventListener('click', () => {
+        document.querySelectorAll('.topline').forEach(button => {
+          button.addEventListener('click', handleToggle);
+          button.addEventListener('touchstart', handleTouchStart);
+          button.addEventListener('touchmove', handleTouchMove);
+        });
+
+        let startY;
+
+        function handleTouchStart(event) {
+          startY = event.touches[0].clientY;
+        }
+
+        function handleTouchMove(event) {
+          const currentY = event.touches[0].clientY;
+          const diffY = startY - currentY;
+
+          if (Math.abs(diffY) > 50) { // 일정한 거리를 이동해야 이벤트 발생
+            if (diffY > 0) {
+              // 위로 스와이프
+              handleToggle();
+            } else {
+              // 아래로 스와이프
+              handleToggle();
+            }
+            // 터치 움직임을 한 번만 처리하도록 startY를 재설정
+            startY = currentY;
+          }
+        }
+
+        function handleToggle() {
           const btmWrap = document.querySelector('.btm-wrap');
-          const btmH200 = document.querySelector('.btm-wrap.h-320');
+          const btmH320 = document.querySelector('.btm-wrap.h-320');
           const btmDimmed = document.querySelector('.btm-dimmed');
           const downIcon = document.querySelector('.down-icon');
           const topline = document.querySelector('.btm-topline');
 
-          if (btmH200) {
-            btmH200.classList.remove('h-320');
+          const openMenu = () => {
+            btmH320.classList.remove('h-320');
             btmWrap.classList.add('full');
             document.body.style.overflowY = "hidden";
             btmDimmed.style.display = "block";
             downIcon.classList.add('rotate');
             topline.classList.add('btm-topline-fix');
-          } else {
-            btmWrap.classList.remove('full');
-            btmWrap.classList.add('h-320');
+            setTimeout(() => {
+              btmWrap.classList.add('slideUp');
+            }, 100);
+          };
+
+          const closeMenu = () => {
+            btmWrap.classList.remove('slideUp');
+            setTimeout(() => {
+              btmWrap.classList.add('h-320');
+            }, 200);
+            setTimeout(() => {
+              btmWrap.classList.remove('full');
+            }, 300);
             document.body.style.overflowY = "scroll";
             btmDimmed.style.display = "none";
             downIcon.classList.remove('rotate');
             topline.classList.remove('btm-topline-fix');
+          };
+
+          if (btmH320) {
+            openMenu();
+          } else {
+            closeMenu();
           }
-        });
-      });
+        }
+
   </script>
   <script>
     function handleIntersection(entries, observer) {
