@@ -35,7 +35,10 @@
       </header>
       <!-- header -->
       <nav class="gnb__wrap gnb__flex">
-        <a href="./typeA01.html">
+        <a href="./typeA01.html"  class="home flex">
+          <span class="icon-health">
+            <img src="./img/icon_heath_small_img.png" alt="" />
+          </span>
           <img src="./img/top_nav_health.svg" alt="헬스" />
         </a>
         <div class="gnb__flex2">
@@ -55,7 +58,7 @@
             <div class="text">
               <img src="./img/health_data.png" alt="" />
             </div>
-            <div class="graph__wrap--bar-type animation-enter">
+            <div class="graph__wrap--bar-type">
               <div class="bar-type-item">
                 <div class="bar-type-box">
                   <div class="badge">
@@ -75,6 +78,11 @@
                 <div class="item-name">30대 평균</div>
               </div>
             </div>
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector('.graph__wrap--bar-type').classList.add('is-active');
+              });
+            </script>
             <div class="recommend-routine__wrap">
               <div class="tit">
                 <p>

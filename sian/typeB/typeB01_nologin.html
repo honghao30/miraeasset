@@ -35,14 +35,276 @@
         <div class="section my_insurance">
           <img src="./img/my_insurance.svg" alt="보험 상품" />
         </div>
-        <div class="section walk-world">
-          <div class="tit">
-            <img src="./img/txt_walking_world.png" alt="" />
+        <div class="card-content__round-box walk-world-section">
+          <div class="text">
+            <img src="./img/text_walk_top.png" alt="세계 런전 여행자중 1위에요" />
           </div>
-          <div class="walk-world">
-            <a href="typeB02Walk.html"><img src="./img/img_walking_world.png" alt="" /></a>
+          <div class="walk-animation">
+            <div class="label-me">
+              <img src="./img/walk_label_me.png" alt="나 1위" />
+            </div>
+            <div class="label-me-ranking">
+              <img src="./img/walk_label_2.png" alt="2위" />
+            </div>
+            <div class="circle-img">
+              <img src="./img/walk_around_round.png" alt="" />
+            </div>
+            <div class="flying-img">
+              <img src="./img/walk_flying.png" alt="비행기" />
+            </div>
+            <div class="balloon-img">
+              <img src="./img/walk_balloon.png" alt="기구" />
+            </div>
+            <div class="earth">
+              <img src="./img/walk_around_earth.png" alt="" />
+            </div>
+          </div>
+          <div class="button__wrap">
+            <a href="#none">
+              <img src="./img/text_walk_button.png" alt="자세히 보기" />
+            </a>
           </div>
         </div>
+        <style>
+          .card-content__round-box.walk-world-section {
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 30px;
+            margin: 50px 16px 30px;
+          }
+          .card-content__round-box.walk-world-section .text img {
+            width: 243px;
+          }
+          .card-content__round-box.walk-world-section .button__wrap img {
+            width: 100%;
+          }
+          .walk-animation {
+            height: 266px;
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+          }
+          /* 기본상태 */
+          .walk-animation .earth img {
+            width: 200px;
+          }
+          .walk-animation .label-me-ranking {
+            opacity: 0;
+            position: absolute;
+            left: -55px;
+            top: 65px;
+          }
+          .walk-animation .label-me {
+            opacity: 0;
+            position: absolute;
+            right: 2px;
+            top: 15px;
+          }
+          .walk-animation .flying-img {
+            position: absolute;
+            left: 29px;
+            top: 26%;
+            z-index: 13;
+            opacity: 0;
+            transition: opacity 0.2s;
+          }
+          .walk-animation .balloon-img {
+            opacity: 0;
+            position: absolute;
+            right: 20px;
+            top: 43%;
+            z-index: 12;
+            transition: opacity 0.5s ease-in;
+          }
+          .walk-animation .circle-img {
+            opacity: 0;
+            position: absolute;
+            left: 0%;
+            top: 14%;
+          }
+          .walk-animation .circle-img {
+            opacity: 0;
+          }
+
+          .walk-animation.is-animation .label-me {
+            animation: label-enter 0.5s ease-in forwards;
+            animation-delay: 3.5s;
+          }
+          .walk-animation.is-animation .label-me img {
+            width: 65.2px;
+          }
+          .walk-animation.is-animation .label-me-ranking {
+            animation: label-enter 0.5s ease-in forwards;
+            animation-delay: 3.5s;
+          }
+          .walk-animation.is-animation .label-me-ranking img {
+            width: 66.31px;
+          }
+          .walk-animation.is-animation .circle-img img {
+            opacity: 1;
+            width: 239.37px;
+          }
+          .walk-animation.is-animation .circle-img {
+            animation: circle-enter 1.5s linear 2;
+            animation-delay: 1.8s;
+            opacity: 0;
+          }
+          .walk-animation.is-animation .earth img {
+            animation: earth-enter 0.5s ease-in forwards;
+          }
+          .walk-animation.is-animation .earth {
+            animation-delay: 0.6s;
+            animation: earth-wave 1.8s ease-in infinite;
+          }
+          .walk-animation.is-animation .flying-img img {
+            width: 53px;
+            animation: flying-wave 1s ease-in infinite;
+          }
+          .walk-animation.is-animation .flying-img {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+            z-index: 13;
+            animation: flying-move 3.8s cubic-bezier(0.3, 0.27, 0.07, 1.64) forwards;
+            animation-delay: 0.7s;
+          }
+          .walk-animation.is-animation .balloon-img {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+            animation: balloon-move 9.8s cubic-bezier(0.3, 0.27, 0.07, 1.64) infinite;
+            animation-delay: 0.6s;
+            /* perspective: 100px; */
+          }
+          .walk-animation.is-animation .balloon-img img {
+            width: 33px;
+            animation: balloon-wave 1.5s ease-in infinite;
+            /* transform-style: preserve-3d; */
+          }
+          @keyframes earth-enter {
+            0% {
+              opacity: 0;
+              transform: scale(1);
+            }
+            30% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.02);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          @keyframes earth-wave {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(5%);
+            }
+          }
+          @keyframes balloon-wave {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(8%);
+            }
+          }
+          @keyframes balloon-move {
+            0%,
+            100% {
+              animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+              transform: translateX(0) rotate(-9.56deg);
+              top: 43%;
+            }
+            50% {
+              transform: translateX(-420%) rotate(9.56deg);
+              top: 45%;
+              animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+            }
+          }
+          @keyframes circle-enter {
+            0% {
+              opacity: 1;
+              transform: rotate(0);
+            }
+            100% {
+              opacity: 1;
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes flying-move {
+            0% {
+              transform: translateX(0%) translateY(-5%);
+            }
+            100% {
+              transform: translateX(150%) translateY(0%);
+            }
+          }
+          @keyframes flying-wave {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(5%);
+            }
+          }
+          @keyframes label-enter {
+            0% {
+              opacity: 0;
+            }
+            60% {
+              opacity: 0.8;
+            }
+            70% {
+              opacity: 0.6;
+            }
+            80% {
+              opacity: 0.8;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        </style>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const walkWorldSection = document.querySelector(".card-content__round-box.walk-world-section");
+            const walkAnimation = document.querySelector(".walk-animation");
+
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting && entry.intersectionRatio === 1) {
+                    walkAnimation.classList.add("is-animation");
+                    observer.unobserve(walkWorldSection); // 애니메이션 시작 후 관찰 중지
+                  }
+                });
+              },
+              { threshold: 1 }
+            );
+
+            observer.observe(walkWorldSection);
+
+            const circleImg = document.querySelector(".circle-img");
+
+            circleImg.addEventListener(
+              "animationend",
+              () => {
+                circleImg.style.opacity = "1";
+              },
+              { once: true }
+            );
+          });
+        </script>
+        <!-- 걷기 연동 -->
         <!-- <div class="card-content__round-box animation-enter">
           <a href="#" class="count-walk">
             <i></i>
