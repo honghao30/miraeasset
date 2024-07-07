@@ -428,6 +428,19 @@ header .logo svg {
 .recommend-routine__wrap .tab-pane1 {
   padding: 0 calc(0 / 16 * 1rem);
 }
+
+.section.user-solution-board {
+  padding: 99px 16px 20px;
+}
+.section.user-solution-board .text img {
+  width: 212px;
+}
+.section.user-solution-board .board {
+  margin-top: 16px;
+}
+.section.user-solution-board .board img {
+  width: 100%;
+}
 .section.drinking-info {
   padding: calc(12 / 16 * 1rem) calc(36 / 16 * 1rem);
 }
@@ -513,12 +526,20 @@ header .logo svg {
 
 .section.drinking-info.fade-in li .info .bar-wrap .graph .grap-info {
 }
+
+
+.section.health_report {
+  padding: calc(20 / 16 * 1rem) calc(6 / 16 * 1rem) calc(50 / 16 * 1rem) ;
+}
+.section.health_report img {
+  width: 100%;
+}
 @keyframes bar-pos1 {
   from {
     width: 0;
   }
   to {
-    width: 35%;
+    width: 65%;
   }
 }
 @keyframes bar-pos2 {
@@ -1010,7 +1031,7 @@ header .logo svg {
 }
 .section.challenge-section.service .scroll-content {
   gap: 12px;
-  padding: calc(0 / 16 * 1rem) calc(16 / 16 * 1rem) calc(50 / 16 * 1rem) 0;
+  padding: calc(0 / 16 * 1rem) calc(16 / 16 * 1rem) calc(50 / 16 * 1rem) calc(16 / 16 * 1rem) ;
 }
 .section.challenge-section.service .title-area .tit img {
   width: 160px;
@@ -1622,4 +1643,9 @@ header .logo svg {
 }
 .gnb__wrap.gnb__flex .home {
   align-items: center;
+}
+
+
+.section.user-solution-board .show-msg img {
+  width: 140px;
 }
