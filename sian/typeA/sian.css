@@ -17,8 +17,8 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 0 18px;
-  height: 72px;
+  padding: 0 16px;
+  height: 56px;
 }
 header.fix {
   width: 100%;
@@ -37,8 +37,8 @@ header .logo svg {
   width: 104px;
 }
 .btn-alert {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
 }
 .ico {
   display: block;
@@ -51,8 +51,8 @@ header .logo svg {
 
 .btn-hamguger {
   position: relative;
-  width: 24px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1136,6 +1136,7 @@ header .logo svg {
   display: flex;
   gap: 2px;
   align-items: center;
+  height: 25px;
 }
 .title-area .tit span {
   color: #1c1c1c;
@@ -1165,6 +1166,7 @@ header .logo svg {
 .title-area .more > img {
   width: 14px;
   height: 14px;
+  margin-bottom: 3px;
 }
 .challenge-content {
   margin-top: 6px;
@@ -1358,6 +1360,7 @@ header .logo svg {
 }
 .util-area {
   gap: 14px;
+  align-items: center;
 }
 .gnb__flex2 {
   color: #c9c9c9;
