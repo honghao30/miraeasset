@@ -564,7 +564,6 @@ header .logo svg {
 }
 .section.user-solution-board .bar-wrap .graph .grap-info.orange {
   background: linear-gradient(to bottom, #ffa14d, #fe7800);
-  animation: bar-pos3 0.5s ease forwards;
 }
 
 .section.drinking-info {
@@ -630,15 +629,14 @@ header .logo svg {
 }
 .section.drinking-info li .info .bar-wrap .graph .grap-info.green {
   background: linear-gradient(to bottom, #66dd81, #38bd56);
-  animation: bar-pos1 0.5s ease forwards;
 }
 .section.drinking-info li .info .bar-wrap .graph .grap-info.blue {
   background: linear-gradient(to bottom, #8bd5ff, #1faeff);
-  animation: bar-pos2 0.5s ease forwards;
+  /* animation: bar-pos2 0.5s ease forwards; */
 }
 .section.drinking-info li .info .bar-wrap .graph .grap-info.yellow {
   background: linear-gradient(to bottom, #ffe580, #ffcc0a);
-  animation: bar-pos3 0.5s ease forwards;
+  /* animation: bar-pos3 0.5s ease forwards; */
 }
 .section.drinking-info li .info .bar-wrap .text {
   color: #1e1e1e;
@@ -1995,4 +1993,20 @@ header .logo svg {
 }
 .w51 {
   width: 51px;
+}
+.show-poistion .drinking-info.animation-enter.fade-in li .info {
+  display: none;
+}
+.section.user-solution-board .bar-wrap .graph .grap-info.orange {
+  background: linear-gradient(to bottom, #ffa14d, #fe7800);
+  animation: bar-pos3 0.5s ease forwards;
+}
+.section.drinking-info.animation-enter.fade-in li .info .bar-wrap .graph .grap-info.green {
+  animation: bar-pos1 0.5s ease forwards;
+}
+.section.drinking-info.animation-enter.fade-in li .info .bar-wrap .graph .grap-info.blue {
+  animation: bar-pos2 0.5s ease forwards;
+}
+.section.drinking-info.animation-enter.fade-in li .info .bar-wrap .graph .grap-info.yellow {
+  animation: bar-pos3 0.5s ease forwards;
 }
