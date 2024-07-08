@@ -165,6 +165,12 @@ header .logo svg {
 }
 .section.card-my-levels {
   padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) calc(24 / 16 * 1rem);
+  color: #1c1c1c;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.4px;
 }
 .section.card-my-levels .tit > img {
   width: 212px;
@@ -190,7 +196,14 @@ header .logo svg {
   border: 1px solid #ebebeb;
   background-color: #fff;
   font-family: "Pretendard";
-  padding: 7px 15px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.28px;
+  min-width: 84px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
 }
 .section.card-my-levels .recommend-routine__wrap .tab-button-list li.is-active a {
   background-color: #f58220;
@@ -596,7 +609,7 @@ header .logo svg {
   animation: bar-pos2 0.5s ease forwards;
 }
 .section.drinking-info li .info .bar-wrap .graph .grap-info.yellow {
-  background: linear-gradient(to bottom, #c9ee84, #89b33b);
+  background: linear-gradient(to bottom, #ffe580, #ffcc0a);
   animation: bar-pos3 0.5s ease forwards;
 }
 .section.drinking-info li .info .bar-wrap .text {
