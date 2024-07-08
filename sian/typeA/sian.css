@@ -502,7 +502,7 @@ header .logo svg {
 .section.user-solution-board .board-top {
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
+  align-items: flex-end;
 }
 .section.user-solution-board .board-tit {
   color: #2d2d2d;
@@ -546,7 +546,7 @@ header .logo svg {
 }
 .section.user-solution-board .bar-wrap .graph .grap-info.orange {
   background: linear-gradient(to bottom, #ffa14d, #fe7800);
-  animation: bar-pos3 0.5s ease forwards;
+  width: 72%;
 }
 
 .section.drinking-info {
@@ -849,7 +849,9 @@ header .logo svg {
   border-radius: 50%;
   transition: 0.3s;
 }
-
+.activity-report-chart .data p:last-child {
+  margin-top: -9px;
+}
 .chart .center {
   background: #f58220;
   display: block;
@@ -869,7 +871,7 @@ header .logo svg {
   flex-direction: column;
   height: 100%;
   color: #fff;
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
