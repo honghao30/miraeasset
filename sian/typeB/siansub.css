@@ -11,18 +11,19 @@
 .show-msg.animation-enter.right-enter.fade-in {
   animation: fade-in-right 0.5s ease forwards;
   animation-delay: 0.7s;
-  width: 95%;
+  width: fit-content;
+  max-width: 95%;
 }
 .show-msg img {
   max-width: 100%;
-  width: 100%;
+  width: fit-content;
 }
 .card-content__round-box.walk-wrap {
   position: relative;
   border-radius: 16px;
 }
 .card-content__round-box.fire-wrap {
-  padding: calc(30 / 16 * 1rem) calc(32 / 16 * 1rem);
+  padding: calc(30 / 16 * 1rem) calc(0 / 16 * 1rem);
 }
 .card-content__round-box.walk-wrap .show-msg {
   position: absolute;
