@@ -17,8 +17,8 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 0 18px;
-  height: 72px;
+  padding: 0 16px;
+  height: 56px;
 }
 header.fix {
   width: 100%;
@@ -37,8 +37,8 @@ header .logo svg {
   width: 104px;
 }
 .btn-alert {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
 }
 .ico {
   display: block;
@@ -51,8 +51,8 @@ header .logo svg {
 
 .btn-hamguger {
   position: relative;
-  width: 24px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,7 @@ header .logo svg {
   letter-spacing: -0.4px;
 }
 .section.welcome.welcome２ {
-  padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) calc(10 / 16 * 1rem);
+  padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
 }
 .section.rutin-list {
 }
@@ -175,6 +175,12 @@ header .logo svg {
 }
 .section.card-my-levels {
   padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) calc(24 / 16 * 1rem);
+  color: #1c1c1c;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.4px;
 }
 .section.card-my-levels .tit > img {
   width: 212px;
@@ -200,7 +206,14 @@ header .logo svg {
   border: 1px solid #ebebeb;
   background-color: #fff;
   font-family: "Pretendard";
-  padding: 7px 15px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.28px;
+  min-width: 84px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
 }
 .section.card-my-levels .recommend-routine__wrap .tab-button-list li.is-active a {
   background-color: #f58220;
@@ -464,17 +477,78 @@ header .logo svg {
 }
 
 .section.user-solution-board {
-  padding: 99px 16px 20px;
+  padding: 84px 16px 18px;
 }
-.section.user-solution-board .text img {
-  width: 212px;
+.section.user-solution-board .text {
+  color: #1c1c1c;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.4px;
 }
 .section.user-solution-board .board {
   margin-top: 16px;
 }
-.section.user-solution-board .board img {
+/* .section.user-solution-board .board img {
   width: 100%;
+} */
+.section.user-solution-board .board {
+  border-radius: 20px;
+  background: #fff4ed;
+  width: 100%;
+  padding: 20px 20px 26px;
 }
+.section.user-solution-board .board-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section.user-solution-board .board-tit {
+  color: #2d2d2d;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px; /* 150% */
+  letter-spacing: -0.36px;
+}
+.section.user-solution-board .board-des {
+  color: #616161;
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+  letter-spacing: -0.24px;
+}
+.section.user-solution-board strong {
+  color: #1e1e1e;
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.section.user-solution-board .bar-wrap {
+  margin-top: 13px;
+}
+.section.user-solution-board .bar-wrap .graph {
+  background-color: #ffffff;
+  height: 22px;
+  width: 100%;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.section.user-solution-board .bar-wrap .graph .grap-info {
+  width: 0;
+  height: 100%;
+  border-radius: 30px;
+}
+.section.user-solution-board .bar-wrap .graph .grap-info.orange {
+  background: linear-gradient(to bottom, #ffa14d, #fe7800);
+  width: 72%;
+}
+
 .section.drinking-info {
   padding: calc(12 / 16 * 1rem) calc(36 / 16 * 1rem);
 }
@@ -545,7 +619,7 @@ header .logo svg {
   animation: bar-pos2 0.5s ease forwards;
 }
 .section.drinking-info li .info .bar-wrap .graph .grap-info.yellow {
-  background: linear-gradient(to bottom, #c9ee84, #89b33b);
+  background: linear-gradient(to bottom, #ffe580, #ffcc0a);
   animation: bar-pos3 0.5s ease forwards;
 }
 .section.drinking-info li .info .bar-wrap .text {
@@ -562,7 +636,7 @@ header .logo svg {
 }
 
 .section.health_report {
-  padding: calc(20 / 16 * 1rem) calc(6 / 16 * 1rem) calc(50 / 16 * 1rem);
+  padding: calc(20 / 16 * 1rem) calc(6 / 16 * 1rem) calc(34 / 16 * 1rem);
 }
 .section.health_report img {
   width: 100%;
@@ -572,7 +646,7 @@ header .logo svg {
     width: 0;
   }
   to {
-    width: 65%;
+    width: 35%;
   }
 }
 @keyframes bar-pos2 {
@@ -588,7 +662,7 @@ header .logo svg {
     width: 0;
   }
   to {
-    width: 85%;
+    width: 72%;
   }
 }
 /* //fnb */
@@ -718,11 +792,19 @@ header .logo svg {
 .section.welcome.before-start img {
   width: 197px;
 }
+.section.welcome.before-start .care-tit {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px; /* 125% */
+  letter-spacing: -0.4px;
+}
 .member-activity-report {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 15px;
+  margin-top: 16px;
   padding: 0 16px;
 }
 .activity-report-left,
@@ -767,7 +849,9 @@ header .logo svg {
   border-radius: 50%;
   transition: 0.3s;
 }
-
+.activity-report-chart .data p:last-child {
+  margin-top: -9px;
+}
 .chart .center {
   background: #f58220;
   display: block;
@@ -787,7 +871,7 @@ header .logo svg {
   flex-direction: column;
   height: 100%;
   color: #fff;
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
@@ -887,11 +971,9 @@ header .logo svg {
 .member-activity-report .box2.box4 {
   padding-bottom: 67px;
 }
-.member-activity-report .box2.box5 .weight-data,
 .member-activity-report .box2.box4 .weight-data {
   color: #383838;
 }
-.member-activity-report .box2.box5 .weight-data strong,
 .member-activity-report .box2.box4 .weight-data strong {
   color: #383838;
 }
@@ -1044,15 +1126,26 @@ header .logo svg {
 .section.challenge-section .title-area {
   padding: calc(44 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
 }
-.section.challenge-section .title-area .tit img {
+/* .section.challenge-section .title-area .tit img {
   width: 127px;
 }
 .section.challenge-section .title-area .more img {
   width: 57px;
-}
+} */
 .title-area .more {
   display: flex;
   gap: 2px;
+  align-items: center;
+  height: 25px;
+}
+.title-area .tit span {
+  color: #1c1c1c;
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 156.25% */
+  letter-spacing: -0.32px;
 }
 .title-area .tit p {
   color: #000;
@@ -1069,6 +1162,11 @@ header .logo svg {
   font-weight: 700;
   line-height: 25px; /* 178.571% */
   letter-spacing: -0.28px;
+}
+.title-area .more > img {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 3px;
 }
 .challenge-content {
   margin-top: 6px;
@@ -1262,6 +1360,7 @@ header .logo svg {
 }
 .util-area {
   gap: 14px;
+  align-items: center;
 }
 .gnb__flex2 {
   color: #c9c9c9;
@@ -1274,6 +1373,7 @@ header .logo svg {
 }
 .section.welcome.before-start.pd40 {
   padding-top: 103px;
+  padding-bottom: 0;
 }
 .member-activity-report.pd60 {
   padding-bottom: 60px;
@@ -1724,6 +1824,19 @@ header .logo svg {
 }
 .section.user-solution-board.show-poistion .show-msg {
   position: absolute;
-  top: 12%;
+  top: 7%;
   left: 3%;
+}
+.weight-data-plus {
+  color: #383838;
+  text-overflow: ellipsis;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px; /* 138.889% */
+  letter-spacing: -0.36px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 4px;
 }
