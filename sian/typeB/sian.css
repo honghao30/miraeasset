@@ -280,8 +280,8 @@ header .logo img {
   margin: 0 auto;
 }
 .section.color-terapy .color-test__wrap .button__wrap {
-  margin-top: 37px;
-  width: 100%;
+  margin-top: 37px;  
+  padding: 0 30px;
 }
 .routine-swiper .swiper-pagination,
 .tab-pane1s .swiper-pagination,

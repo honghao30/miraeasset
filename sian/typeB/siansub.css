@@ -23,7 +23,7 @@
   border-radius: 16px;
 }
 .card-content__round-box.fire-wrap {
-  padding: calc(30 / 16 * 1rem) calc(32 / 16 * 1rem);
+  padding: calc(30 / 16 * 1rem) calc(0 / 16 * 1rem);
 }
 .card-content__round-box.walk-wrap .show-msg {
   position: absolute;
