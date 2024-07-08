@@ -240,7 +240,9 @@
 }
 .btm-walkdes .bar-wrap .graph .grap-info.green {
   background: linear-gradient(to bottom, #66dd81, #38bd56);
-  animation: bar-pos000 0.5s ease forwards;
+}
+.btm-walkdes .bar-wrap .graph .grap-info.green.fade-in {
+  animation: bar-pos3 0.5s ease forwards;
 }
 
 @keyframes bar-pos000 {
