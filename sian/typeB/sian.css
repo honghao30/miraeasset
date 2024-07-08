@@ -205,6 +205,16 @@ header .logo img {
   height: 48px;
   background: url("./img/ico_activity01.png") no-repeat left center;
   background-size: 30px 48px;
+  animation: fireMove 1.2s ease-in infinite;
+}
+@keyframes fireMove {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 .ico-medicine {
   width: 60px;
@@ -246,8 +256,23 @@ header .logo img {
   height: 38px;
   background: url("./img/ico_activity04.png") no-repeat left center;
   background-size: 38px 38px;
+  animation: feel-good 1.2s ease-in infinite;
 }
-
+@keyframes feel-good {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }  
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }  
+}
 .section.color-terapy {
   margin: calc(20 / 16 * 1rem) 0 0;
 }
