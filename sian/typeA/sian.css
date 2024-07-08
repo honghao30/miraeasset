@@ -1200,8 +1200,8 @@ header .logo svg {
   padding: calc(0 / 16 * 1rem) 0 calc(6 / 16 * 1rem);
 }
 .challenge-content .scroll-box .scroll-content {
-  gap: 0px;
-  padding: 0;
+  /* gap: 0px; */
+  /* padding: 0; */
 }
 .challenge-content .scroll-box .scroll-content img {
   width: 226px !important;
