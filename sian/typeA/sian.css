@@ -533,8 +533,8 @@ header .logo svg {
 .section.user-solution-board .board-des {
   color: #616161;
   font-family: "Pretendard";
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 18px; /* 150% */
   letter-spacing: -0.24px;
 }
@@ -602,9 +602,9 @@ header .logo svg {
 .section.drinking-info li .info .description {
   color: #616161;
   font-family: "Pretendard";
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 18px; /* 138.462% */
   letter-spacing: -0.26px;
 }
@@ -1172,7 +1172,7 @@ header .logo svg {
   font-family: "Pretendard";
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 25px; /* 156.25% */
   letter-spacing: -0.32px;
 }
@@ -1979,7 +1979,7 @@ header .logo svg {
 }
 
 .swiper.card0100 .video__wrap {
-  position: relative;  
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -1987,10 +1987,10 @@ header .logo svg {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 26px;
-  -moz-border-radius:12px;
-  -webkit-border-radius:12px;
+  -moz-border-radius: 26px;
+  -webkit-border-radius: 26px;
   overflow: hidden;
 }
 .w51 {
