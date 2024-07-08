@@ -475,7 +475,7 @@ header .logo img {
 
 /* // 루틴 진입후 */
 .section.welcome2 {
-  padding: calc(0 / 16 * 1rem) calc(16 / 16 * 1rem) calc(0 / 16 * 1rem);
+  padding: calc(0 / 16 * 1rem) calc(16 / 16 * 1rem) 10px;
 }
 .section.welcome2 img {
   width: 248px;
@@ -753,6 +753,7 @@ header .logo img {
 }
 .card-content__round-box.my-drink-water {
   margin: 0 16px;
+  padding-top: 60px;
 }
 .water-img__wrap {
   position: relative;
@@ -876,6 +877,7 @@ header .logo img {
   font-style: normal;
   margin-bottom: 0px;
   bottom: 0;
+  margin-left: 4px;
 }
 .card-content__round-box.my-drink-water .data-box {
   margin-top: 30px;
