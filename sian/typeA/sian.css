@@ -63,12 +63,14 @@ header .logo svg {
   margin-top: calc(12 / 16 * 1rem);
   transition: all 0.3s ease-in;
 }
-.gnb__wrap.sticky {
+.gnb__wrap.fix {
   width: 100%;
   top: 0;
+  position: fixed;
   background-color: #fff;
-  z-index: 10;
+  z-index: 18;
   margin: 0;
+  padding: 10px 16px 10px 0;
   transition: all 0.3s ease-in;
 }
 .sian-content {

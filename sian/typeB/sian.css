@@ -525,10 +525,10 @@ header .logo img {
   left: 75%;
   z-index: 13;
   opacity: 0;
-  animation: fadeIn 6s ease forwards;
+  animation: fadeInFire 5s ease forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInFire {
   0% {
     opacity: 0;
   }
