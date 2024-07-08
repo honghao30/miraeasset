@@ -72,8 +72,19 @@ header .logo img {
 .section.welcome img {
   width: 192px;
 }
+.section.welcome .text {
+  color: #212121;
+  font-family: NanumSquare;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.section.welcome .text strong {
+  font-weight: 800;
+}
 .section.my_insurance {
-  padding: calc(10 / 16 * 1rem) calc(10 / 16 * 1rem) 0;
+  padding: calc(0 / 16 * 1rem) calc(10 / 16 * 1rem) 0;
 }
 .section.walk-world {
   padding: calc(50 / 16 * 1rem) calc(10 / 16 * 1rem) calc(10 / 16 * 1rem);
@@ -250,6 +261,7 @@ header .logo img {
 .section.color-terapy .swiper-slide {
   padding: 5px 0;
 }
+.section.color-terapy .color-test__wrap .title-text-type1,
 .section.color-terapy .color-test__wrap .text-color {
   margin-bottom: 29px;
 }
@@ -687,7 +699,7 @@ header .logo img {
   display: block;
   width: 1px;
   height: 40px;
-  background-color: #fff;
+  background-color: #000000;
 }
 .my_level img {
   width: 62px;
@@ -978,4 +990,40 @@ header .logo img {
 .section.achievement-msg img {
   max-width: 100%;
   width: 100%;
+}
+
+.title-text-type1 {
+  text-align: center;
+  color: #212121;
+  font-family: 'NanumSquare';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.22px;
+}
+.title-text-type1 strong {
+  font-weight: 800;
+}
+.title-text-type2 {
+  color: #212121;
+  font-family: 'NanumSquare';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.18px;
+}
+.title-text-type3 {  
+  color: #212121;
+  font-family: NanumSquare;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px; /* 130.769% */
+  letter-spacing: -0.26px;
+}
+.title-text-type3 strong {
+  display: block;
+  font-weight: 700;
 }
