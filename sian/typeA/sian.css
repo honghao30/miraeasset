@@ -97,7 +97,7 @@ header .logo svg {
   letter-spacing: -0.4px;
 }
 .section.welcome.welcome２ {
-  padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) calc(10 / 16 * 1rem);
+  padding: calc(32 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
 }
 .section.rutin-list {
 }
@@ -804,7 +804,7 @@ header .logo svg {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 15px;
+  margin-top: 16px;
   padding: 0 16px;
 }
 .activity-report-left,
@@ -971,11 +971,9 @@ header .logo svg {
 .member-activity-report .box2.box4 {
   padding-bottom: 67px;
 }
-.member-activity-report .box2.box5 .weight-data,
 .member-activity-report .box2.box4 .weight-data {
   color: #383838;
 }
-.member-activity-report .box2.box5 .weight-data strong,
 .member-activity-report .box2.box4 .weight-data strong {
   color: #383838;
 }
