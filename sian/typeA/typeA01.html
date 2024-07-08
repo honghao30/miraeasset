@@ -12,6 +12,12 @@
     <script type="text/javascript" src="../../front_markup/resource/bundle/swiper-bundle.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
+    <script>    // 안드로이드 버그 주소창 없애기    
+        window.addEventListener('load', function(){        
+          document.body.style.height = (document.documentElement.clientHeight + 5) + 'px';        
+            window.scrollTo(0, 1);    
+          }, false);
+    </script>    
   </head>
   <body>
     <div class="sian__wrap sian_a01">
