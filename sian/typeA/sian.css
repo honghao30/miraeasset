@@ -307,7 +307,7 @@ header .logo svg {
   padding: calc(64 / 16 * 1rem) calc(20 / 16 * 1rem) 0;
 }
 .tab-pane1s.health-producttab .swiper-slide {
-  width: 85.6vw !important;
+  width: 85.6vw;
 }
 
 /* 그래프 */
