@@ -1468,7 +1468,7 @@ header .logo svg {
 }
 
 .motion-area .marking1.animation {
-  animation: mark-scale1 0.3s linear infinite;
+  /* animation: mark-scale1 0.3s linear infinite; */
   transform-origin: center;
 }
 .motion-area .marking2.animation {
