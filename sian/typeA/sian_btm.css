@@ -53,20 +53,21 @@
 }
 .btm-wrap.full.slideUp {
   height: auto;
-  top: 20%;  
+  top: 14%;
   transition: all 0.3s ease-in-out;
 }
 .btm-wrap.h-320 {
-  height: 140px;
+  height: 132px;
   box-shadow: 0px -2px 15px 0px rgba(0, 0, 0, 0.13);
   transition: all 0.3s ease-in-out;
 }
 .down-icon {
   width: 32px;
   height: 32px;
+  transform: rotate(180deg);
 }
 .down-icon.rotate {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .btm-bigtit {
   color: #000;
