@@ -278,7 +278,7 @@
             <div>
               <div class="bar-wrap">
                 <div class="graph">
-                  <div class="grap-info orange" style="animation-delay: 0.9s"></div>
+                  <div class="grap-info orange" style="animation-delay: 0.8s"></div>
                 </div>
               </div>
             </div>
@@ -646,6 +646,12 @@
     </div>
     <script>
       document.querySelectorAll(".btm-topline").forEach((button) => {
+        button.addEventListener("click", handleToggle);
+        button.addEventListener("touchstart", handleTouchStart);
+        button.addEventListener("touchmove", handleTouchMove);
+      });
+
+      document.querySelectorAll(".btm-bigtit").forEach((button) => {
         button.addEventListener("click", handleToggle);
         button.addEventListener("touchstart", handleTouchStart);
         button.addEventListener("touchmove", handleTouchMove);
