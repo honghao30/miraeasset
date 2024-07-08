@@ -17,8 +17,18 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 0 16px;
+  padding: 0 18px;
   height: 72px;
+}
+header.fix {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  z-index: 18;
+  margin: 0;
+  /* padding: 10px 16px 10px 0; */
+  transition: all 0.3s ease-in;
 }
 header .logo {
   flex: 1;
@@ -1326,10 +1336,11 @@ header .logo svg {
   letter-spacing: -0.4px;
   color: #1c1c1c;
   justify-content: space-between;
-  padding: 0 calc(16 / 16 * 1rem) calc(12 / 16 * 1rem);
+  padding: 0 calc(0 / 16 * 1rem) calc(12 / 16 * 1rem);
 }
 .gnb__wrap.gnb__flex .home {
   gap: 5px;
+  margin-right: 14px;
 }
 .gnb__wrap.gnb__flex .home .icon-earth img {
   width: 20.04px;
@@ -1344,6 +1355,9 @@ header .logo svg {
   100% {
     transform: rotate(360deg);
   }
+}
+.util-area {
+  gap: 14px;
 }
 .gnb__flex2 {
   color: #c9c9c9;
