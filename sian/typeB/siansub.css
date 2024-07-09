@@ -191,7 +191,7 @@ header {
 .section.my_routine .show-msg {
   width: auto !important;
   position: absolute;
-  bottom: 14.2%;
+  bottom: 4.2%;
   right: 3%;
   z-index: 1;
 }
